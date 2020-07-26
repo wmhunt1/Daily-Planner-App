@@ -47,7 +47,7 @@
       //had to get rid of :00 to make present
       var myDay = 
       [
-          {id: "0", hour: "06", time: "06", AorP: "AM", entry: ""},
+          {id: "0", hour: "06", time: "06", AorP: "AM", entry: "pie"},
           {id: "1", hour: "07", time: "07", AorP: "AM", entry: ""},
           {id: "2", hour: "08", time: "08", AorP: "AM", entry: ""},
           {id: "3", hour: "09", time: "09", AorP: "AM", entry: ""},
@@ -83,7 +83,7 @@
     // creates schdeduler data
     var hourPlan = $("<div>").attr(
     {
-        "class": "col-md-9 description p-0"
+        "class": "col-md-9 description p-0",
     });
     var planData = $("<textarea>");
     hourPlan.append(planData);
@@ -123,6 +123,7 @@
 //save function
 $("button").click(function()
 {
+  //needed this to prevent reload on button press
   event.preventDefault();
   console.log("test")
   console.log(myDay)
