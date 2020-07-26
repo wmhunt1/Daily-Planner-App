@@ -4,6 +4,160 @@
 //! license : MIT
 //! momentjs.com
 
+//day array in military time
+var myDay = 
+[
+    {
+        id: "0",
+        hour: "00",
+        time: "00:00",
+        AorP: "AM"
+    },
+    {
+        id: "1",
+        hour: "01",
+        time: "01:00",
+        AorP: "AM"
+    },
+    {
+        id: "2",
+        hour: "02",
+        time: "02:00",
+        AorP: "AM"
+    },
+    {
+        id: "3",
+        hour: "03",
+        time: "03:00",
+        AorP: "AM"
+    },
+    {
+        id: "4",
+        hour: "04",
+        time: "04:00",
+        AorP: "AM"
+    },
+    {
+        id: "5",
+        hour: "05",
+        time: "05:00",
+        AorP: "AM"
+    },
+    {
+        id: "6",
+        hour: "06",
+        time: "06:00",
+        AorP: "AM"
+    },
+    {
+        id: "7",
+        hour: "07",
+        time: "07:00",
+        AorP: "AM"
+    },
+    {
+        id: "8",
+        hour: "08",
+        time: "08:00",
+        AorP: "AM"
+    },
+    {
+        id: "9",
+        hour: "09",
+        time: "09:00",
+        AorP: "AM"
+    },
+    {
+        id: "10",
+        hour: "10",
+        time: "10:00",
+        AorP: "AM"
+    },
+    {
+        id: "11",
+        hour: "11",
+        time: "11:00",
+        AorP: "AM"
+    },
+    {
+        id: "12",
+        hour: "12",
+        time: "12:00",
+        AorP: "PM"
+    },
+    {
+        id: "13",
+        hour: "13",
+        time: "13:00",
+        AorP: "PM"
+    },
+    {
+        id: "14",
+        hour: "14",
+        time: "14:00",
+        AorP: "PM"
+    },
+    {
+        id: "15",
+        hour: "15",
+        time: "15:00",
+        AorP: "PM"
+    },
+    {
+        id: "16",
+        hour: "16",
+        time: "16:00",
+        AorP: "PM"
+    },
+    {
+        id: "17",
+        hour: "17",
+        time: "17:00",
+        AorP: "PM"
+    },
+    {
+        id: "17",
+        hour: "17",
+        time: "17:00",
+        AorP: "PM"
+    },
+    {
+        id: "18",
+        hour: "18",
+        time: "18:00",
+        AorP: "PM"
+    },
+    {
+        id: "19",
+        hour: "19",
+        time: "19:00",
+        AorP: "PM"
+    },
+    {
+        id: "20",
+        hour: "20",
+        time: "12:00",
+        AorP: "PM"
+    },
+    {
+        id: "21",
+        hour: "21",
+        time: "22:00",
+        AorP: "PM"
+    },
+    {
+        id: "22",
+        hour: "22",
+        time: "22:00",
+        AorP: "PM"
+    },
+    {
+        id: "23",
+        hour: "23",
+        time: "23:00",
+        AorP: "PM"
+    },
+]
 ;(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
