@@ -87,7 +87,7 @@
     {
         "class": "col-md-9 description p-0",
     });
-    var planData = $("<textarea>");
+    var planData = $("<textarea></textarea>");
     hourPlan.append(planData);
     planData.attr("id", thisHour.id);
     //compares hour to time
@@ -124,6 +124,7 @@
 //basics from 4.28 activity 
 function loadDay()
 {
+  
 }
 function initDay()
 {
@@ -146,7 +147,6 @@ $("button").click("submit",function()
   //needed this to prevent reload on button press
   event.preventDefault();
   console.log("test")
-  console.log(myDay)
   saveDay()
   loadDay()
   //needed this to prevent reload on button press
