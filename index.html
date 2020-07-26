@@ -45,156 +45,109 @@
         //dddd gives day of week
         eDisplayMoment.innerHTML = NowMoment.format("dddd: " + 'M-D-YYYY');
         })();
+      //had to get rid of :00 to make present
       var myDay = 
       [
           {
               id: "0",
-              hour: "00",
-              time: "00:00",
+              hour: "06",
+              time: "06",
               AorP: "AM"
           },
           {
               id: "1",
-              hour: "01",
-              time: "01:00",
+              hour: "07",
+              time: "07",
               AorP: "AM"
           },
           {
               id: "2",
-              hour: "02",
-              time: "02:00",
+              hour: "08",
+              time: "08",
               AorP: "AM"
           },
           {
               id: "3",
-              hour: "03",
-              time: "03:00",
+              hour: "09",
+              time: "09",
               AorP: "AM"
           },
           {
               id: "4",
-              hour: "04",
-              time: "04:00",
+              hour: "10",
+              time: "10",
               AorP: "AM"
           },
           {
               id: "5",
-              hour: "05",
-              time: "05:00",
+              hour: "11",
+              time: "11",
               AorP: "AM"
           },
           {
               id: "6",
-              hour: "06",
-              time: "06:00",
-              AorP: "AM"
+              hour: "12",
+              time: "12",
+              AorP: "PM"
           },
           {
               id: "7",
-              hour: "07",
-              time: "07:00",
-              AorP: "AM"
+              hour: "13",
+              time: "01",
+              AorP: "PM"
           },
           {
               id: "8",
-              hour: "08",
-              time: "08:00",
-              AorP: "AM"
+              hour: "14",
+              time: "02",
+              AorP: "PM"
           },
           {
               id: "9",
-              hour: "09",
-              time: "09:00",
-              AorP: "AM"
+              hour: "15",
+              time: "03",
+              AorP: "PM"
           },
           {
               id: "10",
-              hour: "10",
-              time: "10:00",
-              AorP: "AM"
+              hour: "16",
+              time: "04",
+              AorP: "PM"
           },
           {
               id: "11",
-              hour: "11",
-              time: "11:00",
-              AorP: "AM"
+              hour: "17",
+              time: "05",
+              AorP: "PM"
           },
           {
               id: "12",
-              hour: "12",
-              time: "12:00",
+              hour: "18",
+              time: "06",
               AorP: "PM"
           },
           {
               id: "13",
-              hour: "13",
-              time: "13:00",
+              hour: "19",
+              time: "07",
               AorP: "PM"
           },
           {
               id: "14",
-              hour: "14",
-              time: "14:00",
+              hour: "20",
+              time: "08",
               AorP: "PM"
           },
           {
               id: "15",
-              hour: "15",
-              time: "15:00",
+              hour: "21",
+              time: "09",
               AorP: "PM"
           },
           {
               id: "16",
-              hour: "16",
-              time: "16:00",
-              AorP: "PM"
-          },
-          {
-              id: "17",
-              hour: "17",
-              time: "17:00",
-              AorP: "PM"
-          },
-          {
-              id: "17",
-              hour: "17",
-              time: "17:00",
-              AorP: "PM"
-          },
-          {
-              id: "18",
-              hour: "18",
-              time: "18:00",
-              AorP: "PM"
-          },
-          {
-              id: "19",
-              hour: "19",
-              time: "19:00",
-              AorP: "PM"
-          },
-          {
-              id: "20",
-              hour: "20",
-              time: "12:00",
-              AorP: "PM"
-          },
-          {
-              id: "21",
-              hour: "21",
-              time: "22:00",
-              AorP: "PM"
-          },
-          {
-              id: "22",
               hour: "22",
-              time: "22:00",
-              AorP: "PM"
-          },
-          {
-              id: "23",
-              hour: "23",
-              time: "23:00",
+              time: "10",
               AorP: "PM"
           },
       ]
@@ -209,7 +162,7 @@
 
       // creates time field
       var hourField = $("<div>")
-          .text(`${thisHour.hour}${thisHour.AorP}`)
+          .text(`${thisHour.time}${thisHour.AorP}`)
           .attr({
               "class": "col-md-2 hour"
     });
@@ -221,20 +174,21 @@
     var planData = $("<textarea>");
     hourPlan.append(planData);
     planData.attr("id", thisHour.id);
-    if (thisHour.time < moment().format("HH"))
+    //compares hour to time
+    if (thisHour.hour < moment().format("HH"))
      {
         planData.attr 
         ({
             "class": "past", 
         })
     } 
-    else if (thisHour.time === moment().format("HH")) {
+    else if (thisHour.hour === moment().format("HH")) {
         planData.attr
         ({
             "class": "present"
         })
     } 
-    else if (thisHour.time > moment().format("HH")) 
+    else if (thisHour.hour > moment().format("HH")) 
     {
         planData.attr
         ({
