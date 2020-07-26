@@ -48,23 +48,23 @@
       //made it from 6am to 10pm since those are my working hours
       var myDay = 
       [
-          {id: "0", hour: "06", time: "06", AorP: "AM", entry: ""},
-          {id: "1", hour: "07", time: "07", AorP: "AM", entry: ""},
-          {id: "2", hour: "08", time: "08", AorP: "AM", entry: ""},
-          {id: "3", hour: "09", time: "09", AorP: "AM", entry: ""},
-          {id: "4", hour: "10", time: "10", AorP: "AM", entry: ""},
-          {id: "5", hour: "11", time: "11", AorP: "AM", entry: ""},
-          {id: "6", hour: "12", time: "12", AorP: "PM", entry: ""},
-          {id: "7", hour: "13", time: "01", AorP: "PM", entry: ""},
-          {id: "8", hour: "14", time: "02", AorP: "PM", entry: ""},
-          {id: "9", hour: "15", time: "03", AorP: "PM", entry: ""},
-          {id: "10", hour: "16", time: "04", AorP: "PM", entry: ""},
-          {id: "11", hour: "17", time: "05", AorP: "PM", entry: ""},
-          {id: "12", hour: "18", time: "06", AorP: "PM", entry: ""},
-          {id: "13", hour: "19", time: "07", AorP: "PM", entry: ""},
-          {id: "14", hour: "20", time: "08", AorP: "PM", entry: ""},
-          {id: "15", hour: "21", time: "09", AorP: "PM", entry: ""},
-          {id: "16", hour: "22", time: "10", AorP: "PM", entry: ""},
+          {id: "0", hour: "06", time: "06", AorP: "AM", plan: ""},
+          {id: "1", hour: "07", time: "07", AorP: "AM", plan: ""},
+          {id: "2", hour: "08", time: "08", AorP: "AM", plan: ""},
+          {id: "3", hour: "09", time: "09", AorP: "AM", plan: ""},
+          {id: "4", hour: "10", time: "10", AorP: "AM", plan: ""},
+          {id: "5", hour: "11", time: "11", AorP: "AM", plan: ""},
+          {id: "6", hour: "12", time: "12", AorP: "PM", plan: ""},
+          {id: "7", hour: "13", time: "01", AorP: "PM", plan: ""},
+          {id: "8", hour: "14", time: "02", AorP: "PM", plan: ""},
+          {id: "9", hour: "15", time: "03", AorP: "PM", plan: ""},
+          {id: "10", hour: "16", time: "04", AorP: "PM", plan: ""},
+          {id: "11", hour: "17", time: "05", AorP: "PM", plan: ""},
+          {id: "12", hour: "18", time: "06", AorP: "PM", plan: ""},
+          {id: "13", hour: "19", time: "07", AorP: "PM", plan: ""},
+          {id: "14", hour: "20", time: "08", AorP: "PM", plan: ""},
+          {id: "15", hour: "21", time: "09", AorP: "PM", plan: ""},
+          {id: "16", hour: "22", time: "10", AorP: "PM", plan: ""},
       ]
   //to add any preloaded entries
   initDay()
@@ -85,10 +85,12 @@
     });
     // creates schdeduler data
     var hourPlan = $("<div>").attr(
-    {
-        "class": "col-md-9 description p-0",
+    { 
+      "class": "col-md-9 description p-0",
     });
     var planData = $("<textarea></textarea>");
+    //to see what's in it.
+    console.log(planData)
     hourPlan.append(planData);
     planData.attr("id", thisHour.id);
     //compares hour to time
