@@ -38,8 +38,9 @@
         {
         // instantiate a moment object
         var NowMoment = moment();
-        // display value of moment object in #displayMoment div
+        // display value of moment object in #currentDay div
         var eDisplayMoment = document.getElementById('currentDay');
+        //dddd gives day of week
         eDisplayMoment.innerHTML = NowMoment.format("dddd: " + 'M-D-YYYY');
         })();
     </script>
