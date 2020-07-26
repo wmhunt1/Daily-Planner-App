@@ -158,6 +158,15 @@ var myDay =
         AorP: "PM"
     },
 ]
+
+// for (var i = 0; i < myDay.length; i++)
+// {
+//     var hourRow = document.createElement("p")
+//     var hour = document.createTextNode(myDay.hour[i])
+//     hourRow.appendChild(hour)
+//     var timeBlock = document.getElementById("timeBlock");
+//     timeBlock.appendChild(hourRow);
+// }
 ;(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
