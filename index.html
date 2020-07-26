@@ -21,12 +21,12 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="moment.js"></script>
-    <title>Daily Planner App</title>
+    <title>Daily Quest Journal</title>
   </head>
 
   <body>
     <header class="jumbotron">
-      <h1 class="display-3">Daily Planner App</h1>
+      <h1 class="display-3">Daily Quest Journal</h1>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
@@ -161,7 +161,7 @@
 
       // creates time field
       var hourField = $("<div>")
-          .text(`${thisHour.time}${thisHour.AorP}`)
+          .text(`${thisHour.time} ${thisHour.AorP}`)
           .attr({
               "class": "col-md-2 hour"
     });
