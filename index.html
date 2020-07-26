@@ -45,6 +45,7 @@
       eDisplayMoment.innerHTML = NowMoment.format("dddd: " + 'M-D-YYYY');
       })();
       //had to get rid of :00 to make present
+      //made it from 6am to 10pm since those are the hours I'm awake
       var myDay = 
       [
           {id: "0", hour: "06", time: "06", AorP: "AM"},
@@ -125,10 +126,14 @@
 //basics from 4.28 activity 
 function loadDay()
 {
+    for (var i = 0; i < reminders.length; i++)
+    {
+
+    }
 }
 function initDay()
 {
-  var storedDay = JSON.parse(localStorage.getItem("reminder"));
+  var storedDay = JSON.parse(localStorage.getItem("reminders"));
 
   // If myday were retrieved from localStorage, update the my day array to it
   if (storedDay !== null) {
@@ -138,7 +143,7 @@ function initDay()
 }
 function saveDay()
 {
-  localStorage.setItem("reminder", JSON.stringify(reminders));
+  localStorage.setItem("reminders", JSON.stringify(reminders));
 }
 //basics from 4.28 activity 
 //button function
