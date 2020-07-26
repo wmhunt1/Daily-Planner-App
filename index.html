@@ -34,16 +34,16 @@
       <!-- Timeblocks go here -->
     </div>
     <script>
-      //putting non moment.js code here
-        (function()
-        {
-        // instantiate a moment object
-        var NowMoment = moment();
-        // display value of moment object in #currentDay div
-        var eDisplayMoment = document.getElementById('currentDay');
-        //dddd gives day of week
-        eDisplayMoment.innerHTML = NowMoment.format("dddd: " + 'M-D-YYYY');
-        })();
+       //putting non moment.js code here
+      (function()
+      {
+      // instantiate a moment object
+      var NowMoment = moment();
+      // display value of moment object in #currentDay div
+      var eDisplayMoment = document.getElementById('currentDay');
+      //dddd gives day of week
+      eDisplayMoment.innerHTML = NowMoment.format("dddd: " + 'M-D-YYYY');
+      })();
       //had to get rid of :00 to make present
       var myDay = 
       [
@@ -220,18 +220,15 @@
     savePlan.append(saveButton);
     hourRow.append(hourField, hourPlan, savePlan);
 })
-function saveQuests() 
-{
-    localStorage.setItem("myDay", JSON.stringify(myDay));
-}
+//loading and saving data
+//basics from 4.28 activity 
 //save function
 $("button").click(function()
 {
+  event.preventDefault();
   console.log("test")
   console.log(myDay)
   //needed this to prevent reload on button press
-  event.preventDefault();
-  saveQuests()
 });
     </script>
   </body>
