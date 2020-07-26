@@ -30,6 +30,7 @@
       <!-- <p class="lead">A simple calendar app for scheduling your work day</p> -->
       <p id="currentDay" class="lead"></p>
     </header>
+    <!-- <button class="btn btn-danger btn-lg shrink-button" onclick = "clear()">Clear Calendar</button> -->
     <div class="container">
       <output id ="timeBlock"></output>
       <!-- Timeblocks go here -->
@@ -204,6 +205,11 @@
     savePlan.append(saveButton);
     hourRow.append(hourField, hourPlan, savePlan);
 })
+
+function clear()
+{
+    textarea = ""
+}
     </script>
   </body>
 </html>
