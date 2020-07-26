@@ -65,6 +65,8 @@
           {id: "15", hour: "21", time: "09", AorP: "PM", entry: ""},
           {id: "16", hour: "22", time: "10", AorP: "PM", entry: ""},
       ]
+  //to add any preloaded entries
+  initDay()
 //borrowed basics from https://github.com/lbmoody/simple-day-planner
     myDay.forEach(function(thisHour) 
     {
@@ -120,25 +122,33 @@
 })
 //loading and saving data
 //basics from 4.28 activity 
-function renderDay()
+function loadDay()
 {
 }
 function initDay()
 {
+  var storedDay = JSON.parse(localStorage.getItem("myDay"));
 
+  // If myday were retrieved from localStorage, update the my day array to it
+  if (storedDay !== null) {
+    myDay = storedDay;
+  }  
+  loadDay()
 }
 function saveDay()
 {
-
+  localStorage.setItem("myDay", JSON.stringify(myDay));
 }
 //basics from 4.28 activity 
 //button function
-$("button").click(function()
+$("button").click("submit",function()
 {
   //needed this to prevent reload on button press
   event.preventDefault();
   console.log("test")
   console.log(myDay)
+  saveDay()
+  loadDay()
   //needed this to prevent reload on button press
 });
     </script>
